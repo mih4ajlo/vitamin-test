@@ -1,0 +1,168 @@
+    body{
+         --distance : 13px;
+    }
+
+   /*  .sideDrawer > div{
+       transition: solid 1s linear 100ms;
+   } */
+
+    .slideInLeft {
+        
+        animation-name: slideInLeft;        
+        animation-duration: 1s;        
+        animation-fill-mode: both;
+        animation-timing-function: ease-in-out;
+        /* cubic-bezier(0, 0.63, 0.47, 0.54); */
+
+    }
+    .drawer-control{
+        animation-timing-function: ease-out;
+    }
+
+    .slideInLeftslow{
+        animation-name: slideInLeftslow; 
+        animation-duration: 1s; 
+    
+        animation-fill-mode: both;
+        
+
+    }
+
+     @keyframes slideInLeftslow {
+        
+        0% {
+            
+            transform: translateX(0);
+            visibility: visible;
+        }
+        30% {
+            
+            transform: translateX(-70%);
+        }
+        
+        50% {
+            
+            transform: translateX(-30%);
+        }
+
+        100% {
+            
+            transform: translateX(0%);
+        }
+    }
+
+    @keyframes slideInLeft {
+        0% {
+            
+            transform: translateX(-100%);
+            visibility: visible;
+        }
+
+        100% {
+            
+            transform: translateX(0);
+        }
+    }
+
+
+
+    .slideInRight {
+        
+        animation-name: slideInRight;        
+        animation-duration: 1s;        
+        animation-fill-mode: both;
+        animation-timing-function: ease-in-out;
+        /* cubic-bezier(0, 0.63, 0.47, 0.54); */
+
+
+    }
+
+
+    @keyframes slideInRight {
+        0% {            
+            transform: translateX(0);
+            visibility: visible;
+        }
+
+        100% {            
+            transform: translateX(-100%);
+        }
+    }
+
+    .first-mdash,
+    .second-mdash{
+        position: absolute;
+        font-size: 4em;
+        
+        animation-duration: 1s;
+        animation-fill-mode: both;
+        animation-timing-function: ease-in-out;
+    }
+
+    .first-mdash{
+        transform: translateY( var(--distance) );
+    }
+
+    .first-mdash.animate{
+        animation-name: rotate-first-dash;
+    }
+    .second-mdash.animate{
+        animation-name: rotate-second-dash;
+    }
+
+    .first-mdash.animate-reverse{
+        animation-name: rotate-first-dash-reverse;
+    }
+    .second-mdash.animate-reverse{
+        animation-name: rotate-second-dash-reverse;
+    }
+
+
+    @keyframes rotate-first-dash {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(45deg);
+        }
+    }
+
+    @keyframes rotate-second-dash {
+        0% {
+            transform: rotate(0deg) translateY( var(--distance) );
+            
+        }
+
+        100% {
+            transform: rotate(-45deg) translateY(0);
+            
+        }
+    }
+
+
+    /* reverse */
+
+
+    @keyframes rotate-first-dash-reverse {
+        0% {
+            transform: rotate(45deg);
+        }
+
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+
+    @keyframes rotate-second-dash-reverse {
+        0% {
+            transform: rotate(-45deg) translateY(0);
+            
+        }
+
+        100% {
+            transform: rotate(-0) translateY(  var(--distance) );
+            
+        }
+    }
+
