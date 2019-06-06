@@ -72,7 +72,7 @@ a {
   padding: 5px;
 }
 .rest-btns .register {
-  border: 1px solid #ababab;
+  border: 2px solid #ababab;
   border-radius: 4px;
 }
 
@@ -210,32 +210,29 @@ a {
 .control-bar {
   display: flex;
   flex-flow: row;
+  align-self: flex-end;
 }
-.control-bar div {
-  margin: 5px;
+.control-bar > div {
+  margin: 0 10px;
 }
 .control-bar div:first-child {
   margin-left: 0;
 }
 .control-bar div:last-child {
-  margin-top: 30px;
+  display: flex;
+  align-self: flex-end;
 }
-
-.control-bar > div {
-  margin: 0 10px;
-}
-
 .control-bar h3 {
   margin: 5px 0;
 }
 
 .placeInput .butn {
   border: none;
-  margin-top: 30px;
   border-bottom: 1px solid #80808059;
   color: black;
   font-weight: bold;
   padding-left: 0;
+  padding-bottom: 5px;
   max-width: 95%;
   font-size: 2.6em;
 }
@@ -244,10 +241,6 @@ a {
   font-size: 4em;
 }
 
-/* .butn.orange span{
-	position: relative;
-	top: -3px;
-} */
 .content-container {
   font-size: 13px;
   display: grid;
@@ -273,13 +266,23 @@ a {
   border-bottom: 2px solid #e3a53b;
 }
 
-.explore-container img {
-  width: 75px;
-  height: 75px;
+.explore-container {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 50px;
 }
-
+.explore-container img {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+}
 .explore-container div {
-  display: inline-block;
+  display: flex;
+  align-self: center;
+}
+.explore-container > div {
+  box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.45);
+  min-width: 200px;
 }
 
 @media screen and (max-width: 768px) {
